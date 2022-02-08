@@ -39,25 +39,34 @@
 
 html {
   background-color: #daeeff;
+  margin: 0px;
 }
 
-li {
+body {
+  margin: 0px
+}
+
+/* li {
   list-style: none;
   background-color: #c7dff4;
   display: grid;
-  border: 2px solid navy;
+  border: 1px solid navy;
   padding-bottom: 8px;
   margin: 0px 20px 10px 0px;
   text-align: center;
   border-radius: 10px;
   -webkit-box-shadow: -5px 0px 13px -3px rgba(0,0,0,0.57); 
-box-shadow: -5px 0px 13px -3px rgba(0,0,0,0.57);
-}
+box-shadow: -5px 0px 13px -3px rgba(0,0,0,0.57); 
+ }  */
 
 h1 {
   text-align: center;
 }
 h2 {
+  text-align: center;
+}
+
+h3 {
   text-align: center;
 }
 
@@ -94,4 +103,15 @@ img {
 .loginInput {
   margin-left: 5px;
   padding: 4px;
+}
+
+.review_button {
+  text-align: center;
+  width: 200px;
+  margin-left: 450px;
+}
+
+.user_list {
+  width: 300px;
+  margin-left: 400px;
 }

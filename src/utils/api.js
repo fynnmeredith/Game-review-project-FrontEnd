@@ -5,7 +5,8 @@ const boardmastersApi = axios.create({
 });
 
 export const getCategories = () => {
-  return boardmastersApi.get("/categories").then(({ data }) => {
+  return boardmastersApi.get("/categories")
+  .then(({ data }) => {
     return data.categories;
   });
 };
@@ -22,6 +23,20 @@ export const getComments = (review_id) => {
   return boardmastersApi
     .get(`/reviews/${review_id}/comments`)
     .then(({ data }) => {
-        return data.comments
+      return data.comments;
     });
+};
+
+export const getUsers = () => {
+  return boardmastersApi.get("/users")
+  .then(({ data }) => {
+    return data;
+  });
+};
+
+export const patchVotes = (body, review_id) => {
+  return boardmastersApi.patch(`reviews/${review_id}`, body)
+  .then((res) => {
+      return res
+  });
 };
