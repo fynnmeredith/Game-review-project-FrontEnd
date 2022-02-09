@@ -1,0 +1,10 @@
+.sideBar {
+    flex: 3;
+    height: calc(100vh - 50px);
+}
+
+.sideBarList {
+    list-style: none;
+    margin-right: 10px;
+
+}

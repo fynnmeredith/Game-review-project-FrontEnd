@@ -11,6 +11,13 @@ export const getCategories = () => {
   });
 };
 
+export const getAllReviews = () => {
+  return boardmastersApi.get("/reviews")
+  .then(({ data }) => {
+    return data.reviews
+  })
+}
+
 export const getGames = (category) => {
   return boardmastersApi
     .get(`/reviews?category=${category}`)
@@ -34,9 +41,25 @@ export const getUsers = () => {
   });
 };
 
-export const patchVotes = (body, review_id) => {
-  return boardmastersApi.patch(`reviews/${review_id}`, body)
+// export const patchVotes = (votes, review_id) => {
+//   return boardmastersApi.patch(`reviews/${review_id}`, votes)
+//   .then((res) => {
+//       return res
+//   });
+// };
+
+export const getReviewsbyId = (review_id) => {
+  return boardmastersApi.get(`/reviews/${review_id}`)
+  .then(({ data }) => {
+    console.log(data)
+    return data.review
+  })
+}
+
+export const postComment = (review_id, body) => {
+ console.log(body, "BODDDYYYY")
+  return boardmastersApi.post(`reviews/${review_id}/comments`, body)
   .then((res) => {
-      return res
-  });
-};
+    return res;
+  })
+}

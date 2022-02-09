@@ -1,0 +1,22 @@
+.commentsHeader {
+  text-align: left;
+  font-size: medium;
+}
+
+.commentsList {
+  list-style: none;
+  text-align: left;
+}
+
+.dates {
+  text-align: right;
+  margin-right: 50px;
+}
+
+.commentsHr {
+  padding-top: 30px;
+  border: 0px;
+}
+
+
+

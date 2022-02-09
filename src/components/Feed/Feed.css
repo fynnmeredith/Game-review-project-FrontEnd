@@ -1,0 +1,10 @@
+.feed {
+    flex: 5;
+    height: calc(100vh - 140px);
+    overflow-y:scroll ;
+    align-items: flex-start;
+}
+
+.feedTitle {
+    color: azure;
+}

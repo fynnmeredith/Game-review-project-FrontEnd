@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getComments } from "../../utils/api";
+import "./Comments.css";
 
 const Comments = () => {
   const { review_id } = useParams();
@@ -14,15 +15,19 @@ const Comments = () => {
 
   return (
     <main>
-      <h1>Reviews</h1>
+      <hr className="commentsHr" />
+      <h2 className="commentsHeader">Comments</h2>
       <ul>
         {comments.map((comment) => {
           return (
-            <li key={comment.comment_id}>
-              <h3>User: {comment.author}</h3>
+            <li className="commentsList" key={comment.comment_id}>
+              <p>{comment.author}:</p>
               <p>{comment.body}</p>
-              <p>Votes: {comment.votes} <button>upvote</button></p>
+              <div className="votes">
+                <p>Votes: {comment.votes}</p>
+              </div>
               <p className="dates">Posted: {comment.created_at}</p>
+              <hr className="indivHr"/>
             </li>
           );
         })}

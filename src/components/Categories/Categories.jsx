@@ -14,12 +14,11 @@ const Categories = () => {
 
   return (
     <main>
-      <div>
+      <div className="titles">
         <h1>Categories</h1>
+        <h3>Click on a category to view reviewed boardgames</h3>
       </div>
-      <div>
-        <h3>Pick a category to browse reviewed boardgames</h3>
-      </div>
+
       <div className="feedWrapper">
         <ul>
           {categories.map((category) => {
@@ -33,7 +32,7 @@ const Categories = () => {
                   </h3>
                 </div>
                 <div className="feedBottom">
-                  <p>{category.description}</p>
+                  <p className="descrip">{category.description}</p>
                 </div>
               </li>
             );

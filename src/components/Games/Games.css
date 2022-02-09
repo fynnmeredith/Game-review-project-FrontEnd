@@ -1,8 +1,8 @@
 .gameList {
     width: 100%;
   list-style: none;
-  background-color: #bbcaf6;
-  border: 1px solid navy;
+  background-color: #252932;
+  border: 1px solid rgb(0, 157, 255);
   padding-bottom: 0px;
   margin: 8px 5px 0px 0px;
   border-radius: 10px;
@@ -38,7 +38,7 @@ hr {
     font-size: 15px;
 }
 
-.commentButton {
+.reviewButton {
     margin-left: 8px;
     background-color: #7191f1;
     border: 1px;

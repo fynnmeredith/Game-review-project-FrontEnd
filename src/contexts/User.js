@@ -5,7 +5,7 @@ export const UserContext = React.createContext();
 
 export const UserProvider = (props) => {
 const [loggedInUser, setLoggedInUser] = useState({
-    username: 'weegenbump'
+    username: 'weegembump'
   })
 
   const isLoggedIn = loggedInUser.username !== undefined

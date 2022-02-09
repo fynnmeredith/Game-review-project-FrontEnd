@@ -38,7 +38,7 @@
 }
 
 html {
-  background-color: #daeeff;
+  background-color: #324c63;
   margin: 0px;
 }
 
@@ -114,4 +114,9 @@ img {
 .user_list {
   width: 300px;
   margin-left: 400px;
+}
+
+ul {
+  padding-left: 10px;
+  padding-right: 10px
 }
