@@ -16,7 +16,7 @@ const Categories = () => {
     <main>
       <div className="titles">
         <h1>Categories</h1>
-        <h3>Click on a category to view reviewed boardgames</h3>
+        <h3>Click on a category to refine your search</h3>
       </div>
 
       <div className="feedWrapper">
@@ -32,7 +32,7 @@ const Categories = () => {
                   </h3>
                 </div>
                 <div className="feedBottom">
-                  <p className="descrip">{category.description}</p>
+                  <p className="descrip"><Link to={`/reviews?category=${category.slug}`}>{category.description}</Link></p>
                 </div>
               </li>
             );

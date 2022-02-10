@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import { patchVotes } from '../../utils/api';
 
-const PatchVotes = () => {
+const PatchVotes = ({ review }) => {
+  console.log(review)
     const [vote, setVote] = useState(0);
 
-    const giveVote = () => {
-        setVotes((currValue) => {
-          currValue + 1;
-          patchVotes(votes)
-        })
-      }
+const giveVote = () => {
+  setVote((currValue) => {
+    console.log(currValue)
+  return currValue +1;
+  })
+  patchVotes(review.review_id, vote)
+}
 
-    const handleSubmit = () => {};
-
-    
+    return <button className="upvote" onClick={() => giveVote()}>👍 {review.votes + vote}</button>
 }
 
 export default PatchVotes;

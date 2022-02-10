@@ -5,6 +5,7 @@ import { getReviewsbyId } from "../../utils/api";
 import { Link } from "react-router-dom";
 import Comments from "../Comments/Comments"
 import PostComment from "../PostComment/PostComment"
+import PatchVotes from "../Patch_Votes/PatchVotes";
 
 const Review = () => {
   const { review_id } = useParams();
@@ -52,7 +53,8 @@ const Review = () => {
                 <p>{review.review_body}</p>
               </div>
               <div className="feedBottom">
-                Votes: {review.votes} <button className="upvote">👍</button>
+                {/* Votes: {review.votes} <button className="upvote">👍</button> */}
+                <PatchVotes review={review}/>
                 <button className="commentButton" onClick={() => {
                     handleCommentClick()
                 }}>
@@ -66,8 +68,10 @@ const Review = () => {
               </div>
             </li>
       </ul>
+      
     </main>
   );
+ 
 };
 
 export default Review;

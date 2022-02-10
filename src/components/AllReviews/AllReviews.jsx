@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getAllReviews } from "../../utils/api";
 import Review from "../Review/Review";
 import "../AllReviews/AllReviews.css";
+import { Link } from "react-router-dom";
 
 const AllReviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -14,33 +15,31 @@ const AllReviews = () => {
 
   return (
     <main>
-      <div className="titles">
-      </div>
-      <div className="feedWrapper">
-        <ul>
-          {reviews.map((review) => {
-            return (
-              <li className="reviewList" key={review.review_id}>
-                <div className="feedTop">
-                  <img
-                    className="reviewImg"
-                    src={review.review_img_url}
-                    alt=""
-                  />
-                  <p>
-                    {review.owner} {review.title}
-                  </p>
+      <div className="titles"></div>
+      <ul>
+        {reviews.map((review) => {
+          return (
+            <li className="allReviewList" key={review.review_id}>
+              <div className="allFeedTop">
+                <img className="reviewImg" src={review.review_img_url} alt="" />
+                <div className="allReviewsHeader">
+                  <p className="owner">{review.owner}</p>
+                  <p className="title">{review.title}</p>
                 </div>
-                <hr />
-                <div className="feedBottom">
-                  <p>Votes: {review.votes} &emsp; Comments: {review.comment_count}</p>
-            
-                </div>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+              </div>
+              <hr />
+              <div className="allFeedBottom">
+                <p className="date">Posted: {review.created_at}</p>
+                <button className="reviewButton">
+                  <Link to={`/reviews/${review.review_id}`}>
+                    Check out review
+                  </Link>
+                </button>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </main>
   );
 };

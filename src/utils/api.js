@@ -41,25 +41,32 @@ export const getUsers = () => {
   });
 };
 
-// export const patchVotes = (votes, review_id) => {
-//   return boardmastersApi.patch(`reviews/${review_id}`, votes)
-//   .then((res) => {
-//       return res
-//   });
-// };
-
 export const getReviewsbyId = (review_id) => {
   return boardmastersApi.get(`/reviews/${review_id}`)
   .then(({ data }) => {
-    console.log(data)
     return data.review
   })
 }
 
 export const postComment = (review_id, body) => {
- console.log(body, "BODDDYYYY")
   return boardmastersApi.post(`reviews/${review_id}/comments`, body)
   .then((res) => {
     return res;
   })
 }
+
+export const deleteComment = (comment_id) => {
+  return boardmastersApi.delete(`/comments/${comment_id}`)
+  .then(({ data }) => {
+    return data
+  })
+}
+
+export const patchVotes = (review_id, votes) => {
+  console.log(review_id, "review id <<<<<<")
+  console.log(votes)
+  return boardmastersApi.patch(`reviews/${review_id}`, { inc_votes: votes})
+  .then((res) => {
+      return res
+  });
+};

@@ -14,12 +14,11 @@ const PostComment = ({ review }) => {
 
   const handleChange = (event) => {
     const key = event.target.id;
-    console.log(key)
+
     const value = event.target.value;
     setComment((currValue) => {
       const newComment = { ...currValue };
       newComment[key] = value;
-      console.log(newComment)
       return newComment;
     });
   };
