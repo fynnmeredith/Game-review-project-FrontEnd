@@ -34,6 +34,7 @@ const AllReviews = () => {
           </option>
           <option value="created_at">most recent</option>
           <option value="votes">votes</option>
+          <option value="comment_count">comment count</option>
       </select>
       <ul>
         {reviews.map((review) => {
@@ -49,14 +50,14 @@ const AllReviews = () => {
               </div>
               <hr />
               <div className="allFeedBottom">
-                  {/* <p className="votes">Votes: {review.votes}</p> */}
                   <PatchVotes className="votes" review={review}/>
-                <p className="date">{dayjs(review.created_at).format('H:mma MMMM D YYYY')}</p>
                 <button className="reviewButton">
                   <Link to={`/reviews/${review.review_id}`}>
                     Check out review
                   </Link>
                 </button>
+                  <p className="comments">comments ({review.comment_count})</p>
+                <p className="date">{dayjs(review.created_at).format('H:mma MMMM D YYYY')}</p>
               </div>
             </li>
           );

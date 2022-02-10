@@ -38,7 +38,8 @@ const Games = () => {
                 <hr />
                 <div className="feedBottom">
                   <p>
-                    Votes: {game.votes}{" "}
+                    Votes: {game.votes} &emsp;
+                    comments ({game.comment_count})
                     <button className="reviewButton">
                       <Link to={`/reviews/${game.review_id}`}>
                         Check out review

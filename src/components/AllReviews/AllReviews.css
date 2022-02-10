@@ -47,19 +47,24 @@
 
   .votes {
     flex: 1;
-    margin: 8px 8px 0px 0px;
-    padding: 0px 0px 0px 0px
+    margin: 5px 5px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    cursor: pointer;
   }
 
   .date {
     flex: 1;
-    margin: 10px 0px 0px 0px
+    margin: 10px 0px 10px 10px
   }
 
   .reviewButton {
     flex: 1;
     padding: 1px 1px 1px 1px;
-    margin: 10px 10px 10px 50px;
+    margin: 10px 50px 10px 10px;
+  }
+
+  .comments {
+    margin-right: 50px;
   }
 
   .dropDown {

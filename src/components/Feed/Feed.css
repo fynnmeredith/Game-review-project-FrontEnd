@@ -1,6 +1,6 @@
 .feed {
     flex: 5;
-    height: calc(100vh - 160px);
+    height: calc(100vh - 130px);
     overflow-y:scroll ;
     align-items: flex-start;
 }
