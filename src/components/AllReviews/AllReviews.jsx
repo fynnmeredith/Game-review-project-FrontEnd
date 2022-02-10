@@ -51,7 +51,7 @@ const AllReviews = () => {
               <div className="allFeedBottom">
                   {/* <p className="votes">Votes: {review.votes}</p> */}
                   <PatchVotes className="votes" review={review}/>
-                <p className="date">Posted: {dayjs(review.created_at).format('D[th] MMMM YYYY')}</p>
+                <p className="date">{dayjs(review.created_at).format('H:mma MMMM D YYYY')}</p>
                 <button className="reviewButton">
                   <Link to={`/reviews/${review.review_id}`}>
                     Check out review
@@ -67,6 +67,3 @@ const AllReviews = () => {
 };
 
 export default AllReviews;
-
-
-// .substring(0, 10)
