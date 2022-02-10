@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { getGames } from "../../utils/api";
 import { Link } from "react-router-dom";
 import "./Games.css";
+const dayjs = require('dayjs');
 
 const Games = () => {
   let [searchParams, setSearchParams] = useSearchParams();
@@ -47,7 +48,7 @@ const Games = () => {
                     </button>
                   </p>
                   <p className="date">
-                    posted on: {game.created_at.substring(0, 10)}
+                  {dayjs(game.created_at).format('H:mma MMMM D YYYY')}
                   </p>
                 </div>
               </li>

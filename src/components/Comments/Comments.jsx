@@ -5,7 +5,7 @@ import { deleteComment } from "../../utils/api";
 import "./Comments.css";
 import { UserContext } from "../../contexts/User";
 import { useContext } from "react";
-import PatchVotes from "../Patch_Votes/PatchVotes";
+const dayjs = require('dayjs');
 
 const Comments = () => {
   const { loggedInUser } = useContext(UserContext);
@@ -44,7 +44,7 @@ const Comments = () => {
                 {/* <PatchVotes comments={comments}/> */}
               </div>
               <div className="commentBottom">
-              <p className="dates">Posted: {comment.created_at}</p>
+              <p className="dates">{dayjs(comment.created_at).format('H:mma MMMM D YYYY')}</p>
               {comment.author === loggedInUser.username ? (
                       <button
                         type="button"
