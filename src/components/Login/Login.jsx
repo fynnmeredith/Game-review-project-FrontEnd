@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { UserContext } from "../../contexts/User";
 import { useContext } from "react";
+import Users from "../Users/Users";
+import './Login.css'
 
 const Login = () => {
   const { loggedInUser, setLoggedInUser } = useContext(UserContext);
@@ -17,13 +19,20 @@ const Login = () => {
   };
 
   return (
+    <>
+    <div className="logInWarning">
+        <p>
+            For demo purposes please log in as one of the users below.
+        </p>
+    </div>
+    <Users />
     <form
       className="login"
       onSubmit={(event) => {
         handleSubmit(event);
       }}
     >
-      <label>Enter username:</label>
+      {/* <label className="logInLabel">Enter username:</label> */}
       <input
         id="username"
         className="loginInput"
@@ -34,8 +43,9 @@ const Login = () => {
           handleChange(event);
         }}
       ></input>
-      <button>Log in</button>
+      <button className="logInButton">Log in</button>
     </form>
+    </>
   );
 };
 

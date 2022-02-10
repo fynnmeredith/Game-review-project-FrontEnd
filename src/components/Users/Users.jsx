@@ -1,6 +1,7 @@
 import react from "react";
 import { useState, useEffect } from "react";
 import { getUsers } from '../../utils/api'
+import './Users.css'
 
 
 const Users = () => {
@@ -12,11 +13,9 @@ const Users = () => {
         });
       }, []);
 
-      console.log(users)
-
       return (
           <main>
-              <h1>Users</h1>
+              <h1 className="usersTitle">Pre-existing users:</h1>
               <ul>
                   {users.map((user) => {
                       return <li className="user_list">

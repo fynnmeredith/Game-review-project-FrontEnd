@@ -1,5 +1,6 @@
 import "../NavBar/Navbar.css";
 import SearchIcon from "@mui/icons-material/Search";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import { Link } from 'react-router-dom'
 import {UserContext } from '../../contexts/User'
@@ -13,9 +14,9 @@ const Navbar = () => {
         <span className="logo">Boardmasters</span>
       </div>
       <div className="navbar_middle">
-        <div className="searchBar">
-          <SearchIcon className="searchIcon"/>
-          <input placeholder="search for games..." className="searchInput" />
+        <div className="loggedIn">
+          <AccountCircleIcon className="logInIcon"/>
+          <p className="searchInput">Logged-in as: { loggedInUser.username }</p>
         </div>
       </div>
       <div className="navbar_right">
@@ -29,7 +30,7 @@ const Navbar = () => {
           <div className="navbarLink"><Link to="/users">
         <PeopleAltIcon /></Link>
         </div>
-          {/* Logged-in as: { loggedInUser.username } */}
+          
         </div>
         
       </div>

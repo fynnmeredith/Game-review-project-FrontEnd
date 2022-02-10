@@ -1,0 +1,9 @@
+.usersTitle {
+    color: azure;
+}
+
+.user_list {
+    color: azure;
+    list-style: none;
+    margin-top: 10px;
+}

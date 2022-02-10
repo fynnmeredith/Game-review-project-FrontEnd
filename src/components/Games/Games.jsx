@@ -20,7 +20,9 @@ const Games = () => {
   return (
     <main>
       <h1 className="title">{`${category}`} games</h1>
-      <h2 className="title">Browse posted boardgames and checkout the reviews!</h2>
+      <h2 className="title">
+        Browse categorised boardgames and check out the reviews!
+      </h2>
       <div className="feedWrapper">
         <ul>
           {games.map((game) => {
@@ -37,12 +39,9 @@ const Games = () => {
                 <div className="feedBottom">
                   <p>
                     Votes: {game.votes}{" "}
-                    <button className="upvote">
-                      👍
-                    </button>
                     <button className="reviewButton">
                       <Link to={`/reviews/${game.review_id}`}>
-                        Check out reviews
+                        Check out review
                       </Link>
                     </button>
                   </p>

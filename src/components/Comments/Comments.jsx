@@ -5,6 +5,7 @@ import { deleteComment } from "../../utils/api";
 import "./Comments.css";
 import { UserContext } from "../../contexts/User";
 import { useContext } from "react";
+import PatchVotes from "../Patch_Votes/PatchVotes";
 
 const Comments = () => {
   const { loggedInUser } = useContext(UserContext);
@@ -37,10 +38,10 @@ const Comments = () => {
         {comments.map((comment) => {
           return (
             <li className="commentsList" key={comment.comment_id}>
-              <p>{comment.author}:</p>
+              <p>by {comment.author}:</p>
               <p>{comment.body}</p>
               <div className="votes">
-                <p>Votes: {comment.votes}</p>
+                {/* <PatchVotes comments={comments}/> */}
               </div>
               <div className="commentBottom">
               <p className="dates">Posted: {comment.created_at}</p>

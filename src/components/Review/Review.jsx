@@ -46,7 +46,7 @@ const Review = () => {
               <hr className="reviewHr"/>
               <div className="feedMiddle">
                 <p>
-                  Owner: {review.owner} &emsp; Category: {review.category}
+                  by {review.owner} &emsp; category: {review.category}
                 </p>
               </div>
               <div className="reviewBody">

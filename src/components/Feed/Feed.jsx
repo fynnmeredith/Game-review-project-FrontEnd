@@ -5,13 +5,13 @@ const Feed = () => {
     return (
         <main>
             <h1 className='feedTitle'>Game Feed</h1>
-            <select className="dropDown">
+            {/* <select className="dropDown">
         {" "}
         <option value="" selected="disabled" disabled>
             date posted
           </option>
           <option value="incomplete">add another option</option>
-      </select>
+      </select> */}
         <div className='feed'>
             <AllReviews />
         </div>

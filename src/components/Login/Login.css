@@ -1,0 +1,26 @@
+.logInWarning {
+    text-align: center;
+    font-size: x-large;
+    color: azure;
+}
+
+.logInLabel {
+    color: azure;
+}
+
+.loginInput {
+    width: 30%;
+    padding: 5px 0px 5px 15px;
+    height: 30px;
+    background-color: #d7d7d7;
+    border-radius: 20px;
+    border: none;
+}
+
+.logInButton {
+    width: 10%;
+    height: 30px;
+    background-color: #d7d7d7;
+    border-radius: 20px;
+    border: none;
+}

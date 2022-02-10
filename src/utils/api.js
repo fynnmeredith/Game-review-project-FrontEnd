@@ -11,8 +11,10 @@ export const getCategories = () => {
   });
 };
 
-export const getAllReviews = () => {
-  return boardmastersApi.get("/reviews")
+export const getAllReviews = (sort_by) => {
+  return boardmastersApi.get("/reviews", {
+    params: {sort_by}
+  })
   .then(({ data }) => {
     return data.reviews
   })
@@ -63,8 +65,6 @@ export const deleteComment = (comment_id) => {
 }
 
 export const patchVotes = (review_id, votes) => {
-  console.log(review_id, "review id <<<<<<")
-  console.log(votes)
   return boardmastersApi.patch(`reviews/${review_id}`, { inc_votes: votes})
   .then((res) => {
       return res
