@@ -58,7 +58,7 @@ const Review = () => {
                 <button className="commentButton" onClick={() => {
                     handleCommentClick()
                 }}>
-                  Comments {review.comment_count}
+                  Comments ({review.comment_count})
                 </button>
                 {isShowing ? <Comments /> : null }
                 <button className="commentButton" onClick={() => {

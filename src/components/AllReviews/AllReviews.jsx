@@ -4,6 +4,7 @@ import Review from "../Review/Review";
 import "../AllReviews/AllReviews.css";
 import { Link } from "react-router-dom";
 import PatchVotes from "../Patch_Votes/PatchVotes";
+const dayjs = require('dayjs');
 
 const AllReviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -50,7 +51,7 @@ const AllReviews = () => {
               <div className="allFeedBottom">
                   {/* <p className="votes">Votes: {review.votes}</p> */}
                   <PatchVotes className="votes" review={review}/>
-                <p className="date">Posted: {review.created_at.substring(0, 10)}</p>
+                <p className="date">Posted: {dayjs(review.created_at).format('D[th] MMMM YYYY')}</p>
                 <button className="reviewButton">
                   <Link to={`/reviews/${review.review_id}`}>
                     Check out review
@@ -66,3 +67,6 @@ const AllReviews = () => {
 };
 
 export default AllReviews;
+
+
+// .substring(0, 10)
