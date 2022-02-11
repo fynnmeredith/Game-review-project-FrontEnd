@@ -6,11 +6,10 @@ import "./Games.css";
 const dayjs = require('dayjs');
 
 const Games = () => {
-  let [searchParams, setSearchParams] = useSearchParams();
+  let [searchParams] = useSearchParams();
   let category = searchParams.get("category");
 
   const [games, setGames] = useState([]);
-  const [votes, setVotes] = useState(0);
 
   useEffect(() => {
     getGames(category).then((res) => {
@@ -19,7 +18,7 @@ const Games = () => {
   }, [category]);
 
   return (
-    <main>
+    <main className="gamesContainer">
       <h1 className="title">{`${category}`} games</h1>
       <h2 className="title">
         Browse categorised boardgames and check out the reviews!
@@ -38,15 +37,14 @@ const Games = () => {
                 </div>
                 <hr />
                 <div className="feedBottom">
-                  <p>
-                    Votes: {game.votes} &emsp;
-                    comments ({game.comment_count})
                     <button className="reviewButton">
                       <Link to={`/reviews/${game.review_id}`}>
                         Check out review
                       </Link>
                     </button>
-                  </p>
+                    {game.votes} votes &emsp;
+                   {game.comment_count} comment(s)
+                  
                   <p className="date">
                   {dayjs(game.created_at).format('H:mma MMMM D YYYY')}
                   </p>

@@ -64,9 +64,9 @@ export const deleteComment = (comment_id) => {
   })
 }
 
-export const patchVotes = (review_id, votes) => {
-  return boardmastersApi.patch(`reviews/${review_id}`, { inc_votes: votes})
+export const patchVotes = (review_id) => {
+  return boardmastersApi.patch(`reviews/${review_id}`, { inc_votes: 1})
   .then((res) => {
-      return res
+      return res.data.review.votes
   });
 };

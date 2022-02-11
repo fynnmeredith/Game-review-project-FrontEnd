@@ -35,10 +35,7 @@ const PostComment = ({ review }) => {
           username: loggedInUser.username,
           body: ""
         }})
-      
-    }).catch((err) => {
-        console.log(err.response.data)
-    });
+    })
   };
   
   return (

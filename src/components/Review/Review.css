@@ -2,7 +2,7 @@
   list-style: none;
   background-color: #191e2b;
   border: 1px solid rgb(129, 129, 176);
-  padding-bottom: 0px;
+  padding: 0px 5px 1px 5px;
   margin: 8px 5px 0px 0px;
   border-radius: 10px;
   -webkit-box-shadow: -5px 0px 13px -3px rgba(0, 0, 0, 0.57);
@@ -62,4 +62,10 @@ reviewHr {
 
 .title {
     color: azure;
+}
+
+@media only screen and (max-width: 600px) {
+    .reviewContainer {
+        width: 600px;
+    }
 }

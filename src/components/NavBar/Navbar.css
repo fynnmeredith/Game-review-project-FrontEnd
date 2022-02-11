@@ -72,7 +72,6 @@
 }
 
 a:link, a:visited {
-    /* background-color: #6e92fe; */
     color: white;
     padding: 2px 8px;
     border-radius: 8px;
@@ -83,4 +82,10 @@ a:link, a:visited {
 
 a:link {
     cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar_container {
+        width:min-content
+    }
 }

@@ -1,17 +1,19 @@
 import { useState, useEffect } from "react";
 import { getAllReviews } from "../../utils/api";
-import Review from "../Review/Review";
 import "../AllReviews/AllReviews.css";
 import { Link } from "react-router-dom";
-import PatchVotes from "../Patch_Votes/PatchVotes";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 const dayjs = require('dayjs');
 
 const AllReviews = () => {
   const [reviews, setReviews] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getAllReviews('created_at', 'votes').then((res) => {
       setReviews(res);
+      setIsLoading(false);
     });
   }, []);
 
@@ -24,19 +26,21 @@ const AllReviews = () => {
 
   return (
     <main>
-      <div className="titles"></div>
-      <select className="dropDown" value="" onChange={(event)=> {
+      <div className="wholeFeed">
+      <select className="dropDown" selected="disabled" value="sort feed by" onChange={(event)=> {
           handleChange(event)
       }}>
         {" "}
-        <option value="" selected="disabled" disabled>
+        <option disabled>
             sort feed by
           </option>
           <option value="created_at">most recent</option>
           <option value="votes">votes</option>
           <option value="comment_count">comment count</option>
       </select>
-      <ul>
+    {isLoading ? <Box sx={{ display: "flex" }}>
+          <CircularProgress className="loadingCircle" />
+        </Box> :  <ul>
         {reviews.map((review) => {
           return (
             <li className="allReviewList" key={review.review_id}>
@@ -50,19 +54,22 @@ const AllReviews = () => {
               </div>
               <hr />
               <div className="allFeedBottom">
-                  <PatchVotes className="votes" review={review}/>
+                  {/* <PatchVotes className="votes" review={review}/> */}
                 <button className="reviewButton">
                   <Link to={`/reviews/${review.review_id}`}>
                     Check out review
                   </Link>
                 </button>
-                  <p className="comments">comments ({review.comment_count})</p>
+                <p className="vote">{review.votes} votes</p>
+                  <p className="comments">{review.comment_count} comment(s)</p>
                 <p className="date">{dayjs(review.created_at).format('H:mma MMMM D YYYY')}</p>
               </div>
             </li>
           );
         })}
-      </ul>
+      </ul>}
+     
+      </div>
     </main>
   );
 };

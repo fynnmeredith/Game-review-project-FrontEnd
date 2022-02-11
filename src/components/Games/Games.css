@@ -59,3 +59,9 @@ hr {
     font-size: small;
     margin-top: 1px;
 }
+
+@media only screen and (max-width: 600px) {
+    .gamesContainer {
+        width: 600px;
+    }
+}
