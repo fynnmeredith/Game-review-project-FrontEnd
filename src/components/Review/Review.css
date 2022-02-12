@@ -60,6 +60,10 @@ reviewHr {
     cursor: pointer;
 }
 
+.commentButton:hover {
+    background-color: #1a65c1;
+}
+
 .title {
     color: azure;
 }
@@ -67,5 +71,6 @@ reviewHr {
 @media only screen and (max-width: 600px) {
     .reviewContainer {
         width: 600px;
+        margin-left: 18px;
     }
 }

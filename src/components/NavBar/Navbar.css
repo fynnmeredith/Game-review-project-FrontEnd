@@ -22,6 +22,8 @@
 
 .navbar_middle {
     flex: 4;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 .loggedIn {
@@ -52,11 +54,24 @@
 
 .navbar_right {
     flex: 3;
+    margin-left: 20px;
+}
+
+.loginDropDown {
+    background-color: #252932;
+    color: azure;
+    border: none;
+    margin: 5px 10px 5px 5px;
+    padding: 0px 0px 0px 0px;
+    font-size: medium;
+    text-align: center;
+    border-radius: 10px;
+
 }
 
 .navbarLinks {
     display: flex;
-    margin-left: 90px;
+    /* margin-left: 90px; */
     color: white;
 }
 
@@ -66,9 +81,9 @@
     position: relative;
 }
 
-.navbarLink1 {
-    margin-right: 15px;
-    margin-top: 20px
+.wut {
+    margin-top: 4px;
+    margin-right: 0px;
 }
 
 a:link, a:visited {
@@ -86,6 +101,6 @@ a:link {
 
 @media only screen and (max-width: 600px) {
     .navbar_container {
-        width:min-content
+        width: min-content
     }
 }

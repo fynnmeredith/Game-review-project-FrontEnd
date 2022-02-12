@@ -5,13 +5,13 @@ import { deleteComment } from "../../utils/api";
 import "./Comments.css";
 import { UserContext } from "../../contexts/User";
 import { useContext } from "react";
-const dayjs = require('dayjs');
+const dayjs = require("dayjs");
 
 const Comments = () => {
   const { loggedInUser } = useContext(UserContext);
   const { review_id } = useParams();
   const [comments, setComments] = useState([]);
-  
+
   useEffect(() => {
     getComments(review_id).then((res) => {
       setComments(res);
@@ -19,7 +19,7 @@ const Comments = () => {
   }, [review_id]);
 
   const handleDelete = (comment_id) => {
-    deleteComment(comment_id) .then((res) => {
+    deleteComment(comment_id).then((res) => {
       const newComments = comments.map((comment) => {
         return { ...comment };
       });
@@ -27,8 +27,8 @@ const Comments = () => {
         return comment.comment_id !== comment_id;
       });
       setComments(updatedComments);
-    })
-  }
+    });
+  };
 
   return (
     <main>
@@ -40,24 +40,24 @@ const Comments = () => {
             <li className="commentsList" key={comment.comment_id}>
               <p>by {comment.author}:</p>
               <p>{comment.body}</p>
-              <div className="votes">
-                {/* <PatchVotes comments={comments}/> */}
-              </div>
+              <div className="votes"></div>
               <div className="commentBottom">
-              <p className="dates">{dayjs(comment.created_at).format('H:mma MMMM D YYYY')}</p>
-              {comment.author === loggedInUser.username ? (
-                      <button
-                        type="button"
-                        className="delete"
-                        onClick={() => {
-                          handleDelete(comment.comment_id);
-                        }}
-                      >
-                        Delete comment
-                      </button>
-                    ) : null}
+                <p className="dates">
+                  {dayjs(comment.created_at).format("H:mma MMMM D YYYY")}
+                </p>
+                {comment.author === loggedInUser.username ? (
+                  <button
+                    type="button"
+                    className="delete"
+                    onClick={() => {
+                      handleDelete(comment.comment_id);
+                    }}
+                  >
+                    Delete comment
+                  </button>
+                ) : null}
               </div>
-              <hr className="indivHr"/>
+              <hr className="indivHr" />
             </li>
           );
         })}

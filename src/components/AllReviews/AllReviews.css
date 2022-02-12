@@ -1,6 +1,8 @@
 .wholeFeed {
-  height: calc(100vh - 150px);
+  height: calc(100vh - 120px);
   overflow-y: scroll;
+  padding: 0px;
+  margin-bottom: 0px;
 }
 
 .allReviewList {

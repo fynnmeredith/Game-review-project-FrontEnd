@@ -1,13 +1,18 @@
 import "../NavBar/Navbar.css";
-import SearchIcon from "@mui/icons-material/Search";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-import { Link } from 'react-router-dom'
-import {UserContext } from '../../contexts/User'
-import { useContext } from 'react';
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import { Link } from "react-router-dom";
+import { UserContext } from "../../contexts/User";
+import { useContext } from "react";
 
 const Navbar = () => {
-    const { loggedInUser } = useContext(UserContext)
+  const { loggedInUser, setLoggedInUser } = useContext(UserContext);
+
+  const handleOptionChange = (event) => {
+    const value = event.target.value;
+    setLoggedInUser({ username: value });
+  };
+
   return (
     <div className="navbar_container">
       <div className="navbar_left">
@@ -15,27 +20,47 @@ const Navbar = () => {
       </div>
       <div className="navbar_middle">
         <div className="loggedIn">
-          <AccountCircleIcon className="logInIcon"/>
-          <p className="searchInput">Logged-in as: { loggedInUser.username }</p>
+          <AccountCircleIcon className="logInIcon" />
+          <p className="searchInput">
+            {loggedInUser.username}
+          </p>
         </div>
       </div>
       <div className="navbar_right">
         <div className="navbarLinks">
-            <div>
-                <span className="navbarLink1"><Link to={'/'}>Home</Link></span>
-            </div>
           <div>
-              <span className="navbarLink1"><Link to="/login">Login</Link></span>
+            <span className="navbarLinkHome">
+              <Link to={"/"} className="wut">Home</Link>
+            </span>
           </div>
-          <div className="navbarLink"><Link to="/users">
-        <PeopleAltIcon /></Link>
+          <div>
+            <select
+              className="loginDropDown"
+              selected="disabled"
+              value="log in as:"
+              onChange={(event) => {
+                handleOptionChange(event);
+              }}
+            >
+              {" "}
+              <option disabled>log in as:</option>
+              <option value="jessjelly">jessjelly</option>
+              <option value="tickle122">tickle122</option>
+              <option value="weegembump">weegembump</option>
+              <option value="cooljmessy">cooljmessy</option>
+              <option value="happyamy2016">happyamy2016</option>
+              <option value="grumpy19">grumpy19</option>
+            </select>
+          </div>
+          <div className="navbarLink">
+            <Link to="/users">
+              <PeopleAltIcon />
+            </Link>
+          </div>
         </div>
-          
-        </div>
-        
       </div>
     </div>
   );
 };
 
-export default Navbar; 
+export default Navbar;

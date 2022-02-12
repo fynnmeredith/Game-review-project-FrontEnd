@@ -6,22 +6,24 @@ import "./Games.css";
 const dayjs = require('dayjs');
 
 const Games = () => {
-  let [searchParams] = useSearchParams();
-  let category = searchParams.get("category");
+  const [searchParams] = useSearchParams();
+  const category = searchParams.get("category");
 
   const [games, setGames] = useState([]);
 
   useEffect(() => {
     getGames(category).then((res) => {
       setGames(res);
-    });
+    }).catch((err) => {
+      console.log(err)
+    })
   }, [category]);
 
   return (
     <main className="gamesContainer">
-      <h1 className="title">{`${category}`} games</h1>
+      <h1 className="title">{`${category}`}</h1>
       <h2 className="title">
-        Browse categorised boardgames and check out the reviews!
+        Reviewed games:
       </h2>
       <div className="feedWrapper">
         <ul>

@@ -8,7 +8,9 @@ const Feed = () => {
         <div className='feed'>
             <AllReviews />
         </div>
+        
         </main>
+        
         
     )
 }

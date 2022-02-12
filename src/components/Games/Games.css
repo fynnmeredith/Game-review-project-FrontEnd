@@ -47,6 +47,10 @@ hr {
     color: rgb(255, 255, 255);
 }
 
+.reviewButton:hover {
+    background-color: #1a65c1;
+}
+
 .owner {
     font-size: small;
 }
@@ -65,3 +69,4 @@ hr {
         width: 600px;
     }
 }
+

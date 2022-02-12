@@ -7,3 +7,7 @@
     margin-bottom: 10px;
     margin-top: 5px;
 }
+
+.upvote:hover {
+    background-color: #1a65c1;
+}

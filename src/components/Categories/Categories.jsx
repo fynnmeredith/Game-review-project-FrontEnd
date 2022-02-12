@@ -14,6 +14,7 @@ const Categories = () => {
 
   return (
     <main>
+      <div className="wholefeed">
       <div className="titles">
         <h1>Categories</h1>
         <h3>Click on a category to refine your search</h3>
@@ -38,6 +39,7 @@ const Categories = () => {
             );
           })}
         </ul>
+      </div>
       </div>
     </main>
   );
