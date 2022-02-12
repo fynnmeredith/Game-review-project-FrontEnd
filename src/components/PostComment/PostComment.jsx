@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 import { postComment } from "../../utils/api";
 import "../PostComment/PostComment.css";
 import {UserContext } from '../../contexts/User'

@@ -1,6 +1,6 @@
 .navbar_container {
     height: 50px;
-    width: 100%;
+    width: 100vw;
     background-color: #252932;
     display: flex;
     align-items: center;
@@ -22,8 +22,8 @@
 
 .navbar_middle {
     flex: 4;
-    margin-right: 15px;
-    margin-left: 15px;
+    /* margin-right: 15px;
+    margin-left: 15px; */
 }
 
 .loggedIn {
@@ -71,6 +71,7 @@
 
 .navbarLinks {
     display: flex;
+    width:max-content;
     /* margin-left: 90px; */
     color: white;
 }
@@ -101,6 +102,7 @@ a:link {
 
 @media only screen and (max-width: 600px) {
     .navbar_container {
-        width: min-content
+        width: min-content;
+        padding-left: 10px;
     }
 }

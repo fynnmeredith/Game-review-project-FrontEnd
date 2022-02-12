@@ -1,13 +1,13 @@
-import Sidebar from "./components/Sidebar/Sidebar";
-import Feed from "./components/Feed/Feed";
 import './Home.css'
+import AllReviews from "./components/AllReviews/AllReviews";
+import Categories from "./components/Categories/Categories";
 
 const Home = () => {
   return (
     <>
     <div className="homeContainer">
-      <Sidebar />
-      <Feed />
+      <Categories />
+      <AllReviews />
     </div>
     </>
   );

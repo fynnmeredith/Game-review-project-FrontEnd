@@ -77,7 +77,7 @@ const Review = () => {
                   handleAddComment();
                 }}
               >
-                Add comment
+                Post comment
               </button>
               {openAddComment ? <PostComment review={review} /> : null}
             </div>

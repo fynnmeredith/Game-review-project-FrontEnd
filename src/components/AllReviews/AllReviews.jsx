@@ -26,7 +26,7 @@ const AllReviews = () => {
 
   return (
     <main>
-      <div className="wholeFeed">
+      <h1 className="titles">Game feed</h1>
       <select className="dropDown" selected="disabled" value="sort feed by" onChange={(event)=> {
           handleChange(event)
       }}>
@@ -38,6 +38,7 @@ const AllReviews = () => {
           <option value="votes">votes</option>
           <option value="comment_count">comment count</option>
       </select>
+      <div className="wholeFeed">
     {isLoading ? <Box sx={{ display: "flex" }}>
           <CircularProgress className="loadingCircle" />
         </Box> :  <ul>

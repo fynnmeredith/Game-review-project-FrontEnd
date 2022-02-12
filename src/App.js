@@ -12,8 +12,6 @@ import Home from "./Home";
 import ErrorScreen from "./components/ErrorScreen/ErrorScreen";
 
 function App() {
-  
-  
   return (
     <UserProvider>
       <BrowserRouter>
