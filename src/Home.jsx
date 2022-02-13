@@ -6,8 +6,12 @@ const Home = () => {
   return (
     <>
     <div className="homeContainer">
+      <div className='cat'>
       <Categories />
-      <AllReviews />
+      </div>
+      <div className='rev'>
+        <AllReviews />
+      </div>
     </div>
     </>
   );

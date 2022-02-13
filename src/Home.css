@@ -3,6 +3,14 @@
     width: 100%;
 }
 
+.cat {
+    flex: 1;
+}
+
+.rev {
+    flex: 1;
+}
+
 @media only screen and (max-width: 600px) {
     .homeContainer {
         flex-direction:column-reverse;

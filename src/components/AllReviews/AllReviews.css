@@ -1,6 +1,6 @@
 .wholeFeed {
-  flex: 5;
-  align-items: flex-start;
+  /* flex: 5; */
+  /* align-items: flex-start; */
   height: calc(100vh - 160px);
   overflow-y: scroll;
   padding: 0px;
