@@ -4,11 +4,11 @@
 }
 
 .cat {
-    flex: 1;
+    flex: 30%;
 }
 
 .rev {
-    flex: 1;
+    flex: 70%;
 }
 
 @media only screen and (max-width: 600px) {

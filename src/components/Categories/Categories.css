@@ -7,7 +7,8 @@
   } */
 
 .categoryList {
-    margin-bottom: 10px;
+    list-style: none;
+    margin-bottom: 20px;
     border-radius: 10px;
     height: 100px;
 }
@@ -15,12 +16,12 @@
 .revButton {
     list-style: none;
     text-align: left;
-    width: 50vw;
-    height: 100px;
+    width: 30vw;
+    height: 110px;
   background-color: #252932;
   border: 1px solid rgb(1, 255, 39);
-  padding: 0px 0px 0px 0px;
-  margin-right: 0px;
+  padding: 0px 0px 10px 0px;
+  margin-left: 20px;
   margin-bottom: 8px;
   border-radius: 10px;
   -webkit-box-shadow: -5px 0px 13px -3px rgba(0, 0, 0, 0.57);
@@ -33,13 +34,13 @@
 }
 
 .feedTop {
-    
     text-align: left;
-    margin: 1px 1px 1px 5px
+    margin: 0px 0px 0px 5px;
 }
 
 .feedBottom {
-    margin: 0px 0px 0px 5px;
+    margin: 0px 0px 5px 5px;
+    padding-bottom: 0px ;
     text-align: left;
 }
 
@@ -49,7 +50,7 @@
 
 .descrip {
     font-size: small;
-    margin-top: 2px;
+    margin-top: 0px;
 }
 
 @media only screen and (max-width: 600px) {
