@@ -1,21 +1,21 @@
 .inputComment {
-    width: 60%;
-    height: 30px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    padding-left: 15px;
-    border: none;
-    margin: 20px 10px 2px 5px;
+  width: 60%;
+  height: 30px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  border: none;
+  margin: 20px 10px 2px 5px;
 }
 
 .postButton {
-    margin: 10px 10px 10px 10px;
-    background-color: #07a93a;
-    border: 1px;
-    padding: 3px 8px 3px 8px;
-    border-radius: 4px;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
+  margin: 10px 10px 10px 10px;
+  background-color: #07a93a;
+  border: 1px;
+  padding: 3px 8px 3px 8px;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }

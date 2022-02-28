@@ -1,19 +1,19 @@
 .take {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .takeMeHome {
-    display: flex;
-    justify-content: center;
-    padding: 8px;
-    background-color: rgb(69, 77, 77);
-    border: 1px solid black;
-    border-radius: 30px;
-    font-size: larger;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  background-color: rgb(69, 77, 77);
+  border: 1px solid black;
+  border-radius: 30px;
+  font-size: larger;
 }
 
 .whoops {
-    color: azure;
-    margin-top: 60px;
+  color: azure;
+  margin-top: 60px;
 }

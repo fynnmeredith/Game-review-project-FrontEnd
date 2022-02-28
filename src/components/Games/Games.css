@@ -1,5 +1,5 @@
 .gameList {
-    width: 100%;
+  width: 100%;
   list-style: none;
   background-color: #252932;
   border: 1px solid rgb(0, 157, 255);
@@ -19,56 +19,55 @@
 }
 
 .feedTop {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 hr {
-    width: 90%
+  width: 90%;
 }
 
 .feedBottom {
-    margin: 0px 0px 0px 5px;
+  margin: 0px 0px 0px 5px;
 }
 
 .upvote {
-    background-color: #7191f1;
-    border-radius: 4px;
-    border: 1px;
-    font-size: 15px;
+  background-color: #7191f1;
+  border-radius: 4px;
+  border: 1px;
+  font-size: 15px;
 }
 
 .reviewButton {
-    margin-left: 8px;
-    background-color: #7191f1;
-    border: 1px;
-    padding: 3px 5px 3px 5px;
-    border-radius: 4px;
-    color: rgb(255, 255, 255);
+  margin-left: 8px;
+  background-color: #7191f1;
+  border: 1px;
+  padding: 3px 5px 3px 5px;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
 }
 
 .reviewButton:hover {
-    background-color: #1a65c1;
+  background-color: #1a65c1;
 }
 
 .owner {
-    font-size: small;
+  font-size: small;
 }
 
 .game_header {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .date {
-    font-size: small;
-    margin-top: 0px;
-    text-align: right;
-    padding-right: 20px;
+  font-size: small;
+  margin-top: 0px;
+  text-align: right;
+  padding-right: 20px;
 }
 
 @media only screen and (max-width: 600px) {
-    .gamesContainer {
-        width: 600px;
-    }
+  .gamesContainer {
+    width: 600px;
+  }
 }
-

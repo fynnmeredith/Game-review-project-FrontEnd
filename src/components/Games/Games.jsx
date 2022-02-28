@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { getGames } from "../../utils/api";
 import { Link } from "react-router-dom";
 import "./Games.css";
-const dayjs = require('dayjs');
+const dayjs = require("dayjs");
 
 const Games = () => {
   const [searchParams] = useSearchParams();
@@ -12,19 +12,19 @@ const Games = () => {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
-    getGames(category).then((res) => {
-      setGames(res);
-    }).catch((err) => {
-      console.log(err)
-    })
+    getGames(category)
+      .then((res) => {
+        setGames(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, [category]);
 
   return (
     <main className="gamesContainer">
       <h1 className="title">{`${category}`}</h1>
-      <h2 className="title">
-        Reviewed games:
-      </h2>
+      <h2 className="title">Reviewed games:</h2>
       <div className="feedWrapper">
         <ul>
           {games.map((game) => {
@@ -39,16 +39,15 @@ const Games = () => {
                 </div>
                 <hr />
                 <div className="feedBottom">
-                    <button className="reviewButton">
-                      <Link to={`/reviews/${game.review_id}`}>
-                        Check out review
-                      </Link>
-                    </button>
-                    {game.votes} votes &emsp;
-                   {game.comment_count} comment(s)
-                  
+                  <button className="reviewButton">
+                    <Link to={`/reviews/${game.review_id}`}>
+                      Check out review
+                    </Link>
+                  </button>
+                  {game.votes} votes &emsp;
+                  {game.comment_count} comment(s)
                   <p className="date">
-                  {dayjs(game.created_at).format('H:mma MMMM D YYYY')}
+                    {dayjs(game.created_at).format("H:mma MMMM D YYYY")}
                   </p>
                 </div>
               </li>

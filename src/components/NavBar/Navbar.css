@@ -1,108 +1,105 @@
 .navbar_container {
-    height: 50px;
-    width: 100vw;
-    background-color: #252932;
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
+  height: 50px;
+  width: 100vw;
+  background-color: #252932;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
 }
 
 .navbar_left {
-    flex: 3;
+  flex: 3;
 }
 
 .logo {
-    font-size: 24px;
-    margin-left: 20px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
+  font-size: 24px;
+  margin-left: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
 }
 
 .navbar_middle {
-    flex: 4;
-    /* margin-right: 15px;
-    margin-left: 15px; */
+  flex: 4;
 }
 
 .loggedIn {
-    width: 100%;
-    height: 30px;
-    background-color: #252932;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  height: 30px;
+  background-color: #252932;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .logInIcon {
-    font-size: 40px !important;
-    margin: 10px 10px 10px 10px;
-    color:azure;
+  font-size: 40px !important;
+  margin: 10px 10px 10px 10px;
+  color: azure;
 }
 
 .searchInput {
-    border: none;
-    width: 70%;
-    margin-top: 12px;
-    color: azure;
+  border: none;
+  width: 70%;
+  margin-top: 12px;
+  color: azure;
 }
 
 .searchInput:focus {
-    outline: none;
+  outline: none;
 }
 
 .navbar_right {
-    flex: 3;
-    margin-left: 20px;
+  flex: 3;
+  margin-left: 20px;
 }
 
 .loginDropDown {
-    background-color: #252932;
-    color: azure;
-    border: none;
-    margin: 5px 10px 5px 5px;
-    padding: 0px 0px 0px 0px;
-    font-size: medium;
-    text-align: center;
-    border-radius: 10px;
-
+  background-color: #252932;
+  color: azure;
+  border: none;
+  margin: 5px 10px 5px 5px;
+  padding: 0px 0px 0px 0px;
+  font-size: medium;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .navbarLinks {
-    display: flex;
-    width:max-content;
-    /* margin-left: 90px; */
-    color: white;
+  display: flex;
+  width: max-content;
+  color: white;
 }
 
 .navbarLink {
-    margin-right: 15px;
-    cursor: pointer;
-    position: relative;
+  margin-right: 15px;
+  cursor: pointer;
+  position: relative;
 }
 
 .wut {
-    margin-top: 4px;
-    margin-right: 0px;
+  margin-top: 4px;
+  margin-right: 0px;
 }
 
-a:link, a:visited {
-    color: white;
-    padding: 2px 8px;
-    border-radius: 8px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+a:link,
+a:visited {
+  color: white;
+  padding: 2px 8px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
 a:link {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
-    .navbar_container {
-        width: min-content;
-        padding-left: 10px;
-    }
+  .navbar_container {
+    width: min-content;
+    padding-left: 10px;
+  }
 }

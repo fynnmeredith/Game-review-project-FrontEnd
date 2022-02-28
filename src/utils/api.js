@@ -6,18 +6,18 @@ const boardmastersApi = axios.create({
 
 export const getCategories = () => {
   return boardmastersApi.get("/categories")
-  .then(({ data }) => {
-    return data.categories;
-  });
+    .then(({ data }) => {
+      return data.categories;
+    });
 };
 
 export const getAllReviews = (sort_by) => {
   return boardmastersApi.get("/reviews", {
-    params: {sort_by}
+    params: { sort_by }
   })
-  .then(({ data }) => {
-    return data.reviews
-  })
+    .then(({ data }) => {
+      return data.reviews
+    })
 }
 
 export const getGames = (category) => {
@@ -38,35 +38,35 @@ export const getComments = (review_id) => {
 
 export const getUsers = () => {
   return boardmastersApi.get("/users")
-  .then(({ data }) => {
-    return data;
-  });
+    .then(({ data }) => {
+      return data;
+    });
 };
 
 export const getReviewsbyId = (review_id) => {
   return boardmastersApi.get(`/reviews/${review_id}`)
-  .then(({ data }) => {
-    return data.review
-  })
+    .then(({ data }) => {
+      return data.review
+    })
 }
 
 export const postComment = (review_id, body) => {
   return boardmastersApi.post(`reviews/${review_id}/comments`, body)
-  .then((res) => {
-    return res;
-  })
+    .then((res) => {
+      return res;
+    })
 }
 
 export const deleteComment = (comment_id) => {
   return boardmastersApi.delete(`/comments/${comment_id}`)
-  .then(({ data }) => {
-    return data
-  })
+    .then(({ data }) => {
+      return data
+    })
 }
 
 export const patchVotes = (review_id) => {
-  return boardmastersApi.patch(`reviews/${review_id}`, { inc_votes: 1})
-  .then((res) => {
+  return boardmastersApi.patch(`reviews/${review_id}`, { inc_votes: 1 })
+    .then((res) => {
       return res.data.review.votes
-  });
+    });
 };

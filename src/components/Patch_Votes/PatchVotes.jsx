@@ -4,7 +4,7 @@ import "./PatchVotes.css";
 
 const PatchVotes = ({ review }) => {
   const [vote, setVote] = useState(0);
-  const [minusVote, setMinusVote] = useState(0)
+  const [minusVote, setMinusVote] = useState(0);
 
   const giveVote = () => {
     setVote((currValue) => currValue + 1);
@@ -22,14 +22,15 @@ const PatchVotes = ({ review }) => {
 
   return (
     <>
-    <div className="likeIt">
-      <button className="upvote" onClick={() => giveVote()} id="oneVote">
-       👍
-      </button>
-      <p>{review.votes}</p>
-      <button className="downvote" onClick={() => takeVote()} id="minusVote">👎</button>
-
-    </div>
+      <div className="likeIt">
+        <button className="upvote" onClick={() => giveVote()} id="oneVote">
+          👍
+        </button>
+        <p>{review.votes}</p>
+        <button className="downvote" onClick={() => takeVote()} id="minusVote">
+          👎
+        </button>
+      </div>
     </>
   );
 };

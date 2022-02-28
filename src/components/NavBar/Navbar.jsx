@@ -21,16 +21,16 @@ const Navbar = () => {
       <div className="navbar_middle">
         <div className="loggedIn">
           <AccountCircleIcon className="logInIcon" />
-          <p className="searchInput">
-            {loggedInUser.username}
-          </p>
+          <p className="searchInput">{loggedInUser.username}</p>
         </div>
       </div>
       <div className="navbar_right">
         <div className="navbarLinks">
           <div>
             <span className="navbarLinkHome">
-              <Link to={"/"} className="wut">Home</Link>
+              <Link to={"/"} className="wut">
+                Home
+              </Link>
             </span>
           </div>
           <div>
