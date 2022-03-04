@@ -15,7 +15,7 @@ const PatchVotes = ({ review }) => {
 
   const takeVote = () => {
     setMinusVote((currValue) => currValue - 1);
-    patchVotes(review.review_id, vote);
+    patchVotes(review.review_id, minusVote);
     review.votes -= 1;
     document.getElementById("minusVote").disabled = true;
   };
