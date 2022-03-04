@@ -2,6 +2,10 @@
 
 ## Related links
 
+The hosted version of this app:
+
+https://boardmasters.netlify.app
+
 The Boardmasters back-end repository:
 
 https://github.com/fynnmeredith/Game-Review-project-BackEnd
