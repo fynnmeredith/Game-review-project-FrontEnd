@@ -2,7 +2,7 @@
 
 ## Related links
 
-The hosted version of this app:
+The hosted version of Boardmasters:
 
 https://boardmasters.netlify.app
 
