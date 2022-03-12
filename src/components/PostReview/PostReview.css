@@ -1,0 +1,65 @@
+.postReview {
+    display: flex;
+     flex-direction: column;
+    align-content: space-around; 
+}
+
+.titleInput {
+    /* margin-left: 20px;
+    margin-top: 15px; */
+    align-content: space-around;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 5px 5px 5px 10px;
+    border: none
+}
+
+.owner {
+    /* margin-left: 20px;
+    margin-top: 15px; */
+    align-content: space-around;
+    flex-direction: column;
+    padding-left: 10px;
+    color: azure;
+}
+
+.review {
+    /* margin-left: 20px;
+    margin-top: 15px; */
+    align-content: space-around;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 5px 5px 5px 10px;
+    border: none;
+    width: 90%
+}
+
+.designerInput {
+    /* margin-left: 20px;
+    margin-top: 15px; */
+    align-content: space-around;
+    flex-direction: column;
+    border-radius: 10px;
+    padding:5px 5px 5px 10px;
+    border: none
+}
+
+.categoryDropDown {
+    /* margin-left: 20px;
+    margin-top: 15px; */
+    align-content: space-around;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 5px 5px 5px 10px;
+    border: none;
+}
+
+.submitButton {
+    /* margin-left: 20px;
+    margin-top: 15px; */
+    align-content: space-around;
+    flex-direction: column;
+    border-radius: 10px;
+    padding:5px 5px 5px 5px;
+    border: none
+}

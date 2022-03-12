@@ -1,6 +1,7 @@
 import "../NavBar/Navbar.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import HomeIcon from '@mui/icons-material/Home';
+import AddIcon from '@mui/icons-material/Add';
 import { Link } from "react-router-dom";
 import { UserContext } from "../../contexts/User";
 import { useContext } from "react";
@@ -29,7 +30,7 @@ const Navbar = () => {
           <div>
             <span className="navbarLinkHome">
               <Link to={"/"} className="wut">
-                Home
+                <HomeIcon />
               </Link>
             </span>
           </div>
@@ -53,8 +54,8 @@ const Navbar = () => {
             </select>
           </div>
           <div className="navbarLink">
-            <Link to="/users">
-              <PeopleAltIcon />
+            <Link to="/postReview">
+              <AddIcon />
             </Link>
           </div>
         </div>

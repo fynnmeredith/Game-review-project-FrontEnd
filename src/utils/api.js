@@ -51,7 +51,7 @@ export const getReviewsbyId = (review_id) => {
 }
 
 export const postComment = (review_id, body) => {
-  return boardmastersApi.post(`reviews/${review_id}/comments`, body)
+  return boardmastersApi.post(`/reviews/${review_id}/comments`, body)
     .then((res) => {
       return res;
     })
@@ -65,8 +65,15 @@ export const deleteComment = (comment_id) => {
 }
 
 export const patchVotes = (review_id) => {
-  return boardmastersApi.patch(`reviews/${review_id}`, { inc_votes: 1 })
+  return boardmastersApi.patch(`/reviews/${review_id}`, { inc_votes: 1 })
     .then((res) => {
       return res.data.review.votes
     });
+};
+
+export const postReview = (body) => {
+  return boardmastersApi.post(`/reviews`, body).then((res) => {
+    console.log(res)
+    return res;
+  });
 };

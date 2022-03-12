@@ -9,6 +9,7 @@ import Review from "./components/Review/Review";
 import PostComment from "./components/Comments/Comments"
 import Home from "./Home";
 import ErrorScreen from "./components/ErrorScreen/ErrorScreen";
+import PostReview from "./components/PostReview/PostReview"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/reviews/:review_id/comments" element={<Comments />} />
         <Route path="/users" element={<Users />}> </Route>
         <Route path="/reviews/:review_id" element={<Review />} />
+        <Route path="/postReview" element={<PostReview />} />
         <Route path="reviews/:review_id/comments" element={<PostComment />} />
         <Route path="*" element={<ErrorScreen />} />
       </Routes>
