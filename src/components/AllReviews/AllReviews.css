@@ -90,3 +90,15 @@
   .vote {
     margin-right: 20px
   }
+
+  .delRev {
+    align-self: center;
+  }
+
+  .deleteReview {
+    background-color: red;
+    border: none;
+    color: azure;
+    padding: 4px;
+    border-radius: 2px;
+  }

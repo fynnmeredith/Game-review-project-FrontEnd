@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react";
-import { getAllReviews } from "../../utils/api";
+import { deleteReview, getAllReviews } from "../../utils/api";
 import "../AllReviews/AllReviews.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
+import { UserContext } from "../../contexts/User";
+import { useContext } from "react";
 const dayjs = require("dayjs");
 
 const AllReviews = () => {
+  const { loggedInUser } = useContext(UserContext);
   const [reviews, setReviews] = useState([]);
+  const { review_id } = useParams();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -16,6 +20,18 @@ const AllReviews = () => {
       setIsLoading(false);
     });
   }, []);
+
+  const handleDelete = (review_id) => {
+    deleteReview(review_id).then((res) => {
+      const newReviews = reviews.map((review) => {
+        return { ...review };
+      });
+      const updatedReviews = newReviews.filter((review) => {
+        return review.review_id !== review_id;
+      });
+      setReviews(updatedReviews);
+    });
+  };
 
   const handleChange = (event) => {
     let value = event.target.value;
@@ -75,6 +91,19 @@ const AllReviews = () => {
                     <p className="comments">
                       {review.comment_count} comment(s)
                     </p>
+                    <div className="delRev">
+                    {review.owner === loggedInUser.username ? (
+                  <button
+                    type="button"
+                    className="deleteReview"
+                    onClick={() => {
+                      handleDelete(review.review_id);
+                    }}
+                  >
+                    Delete review
+                  </button>
+                ) : null}
+                    </div>
                     <p className="date">
                       {dayjs(review.created_at).format("H:mma MMMM D YYYY")}
                     </p>
