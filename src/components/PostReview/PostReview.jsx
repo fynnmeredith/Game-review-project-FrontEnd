@@ -3,12 +3,14 @@ import { postReview } from "../../utils/api";
 import { UserContext } from "../../contexts/User";
 import { useContext } from "react";
 import "../PostReview/PostReview.css";
+import { useParams } from "react-router-dom";
 
 const PostReview = () => {
   const { loggedInUser } = useContext(UserContext);
   const [review, setReview] = useState({
     owner: loggedInUser.username,
   });
+  const [showMessage, setShowMessage] = useState(false);
 
   const handleChange = (event) => {
     const key = event.target.id;
@@ -46,6 +48,9 @@ const PostReview = () => {
         }}
       >
         <div className="titleInput">
+          <h4 className="description">
+            Which board game would you like to review?
+          </h4>
           <input
             id="title"
             className="titleInput"
@@ -55,17 +60,8 @@ const PostReview = () => {
             onChange={(event) => handleChange(event)}
           ></input>
         </div>
-        <div className="review">
-          <textarea
-            id="review_body"
-            className="review"
-            placeholder="review"
-            value={review.review_body}
-            type="text"
-            onChange={(event) => handleChange(event)}
-          ></textarea>
-        </div>
         <div className="designerInput">
+          <h4 className="description">Who designed the board game?</h4>
           <input
             id="designer"
             className="designerInput"
@@ -76,9 +72,12 @@ const PostReview = () => {
           ></input>
         </div>
         <div className="categoryDropDown">
+          <h4 className="description">
+            Which category does the board game come under?
+          </h4>
           <select
             id="category"
-            className="categoryDropDown"
+            className="cat"
             selected="disabled"
             value={review.category}
             onChange={(event) => handleChange(event)}
@@ -94,8 +93,30 @@ const PostReview = () => {
             <option value="engine-building">engine-building</option>
           </select>
         </div>
-        <div className="submitButton">
-          <button>submit</button>
+        <div className="review">
+          <h4 className="description">Please leave your review below:</h4>
+          <textarea
+            id="review_body"
+            className="review"
+            placeholder="review"
+            value={review.review_body}
+            type="text"
+            onChange={(event) => handleChange(event)}
+          ></textarea>
+        </div>
+        <div className="sub">
+          <button
+            className="submitButton"
+            onClick={() => setShowMessage((currVal) => !currVal)}
+          >
+            submit review
+          </button>
+          <div className="message">
+            {/* {Object.keys(review).length < 5 ? "Please fill out all review sections" : null} */}
+            <div className="thanks">
+              {showMessage ? "Thank you for submitting a review" : "Please fill out all review sections"}
+            </div>
+          </div>
         </div>
       </form>
     </div>

@@ -2,21 +2,22 @@
     display: flex;
      flex-direction: column;
     align-content: space-around; 
+    /* text-align: center;
+    background-color: #252932;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px; */
 }
 
 .titleInput {
-    /* margin-left: 20px;
-    margin-top: 15px; */
     align-content: space-around;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px 5px 5px 10px;
-    border: none
+    border: none;
 }
 
 .owner {
-    /* margin-left: 20px;
-    margin-top: 15px; */
     align-content: space-around;
     flex-direction: column;
     padding-left: 10px;
@@ -24,42 +25,64 @@
 }
 
 .review {
-    /* margin-left: 20px;
-    margin-top: 15px; */
     align-content: space-around;
     flex-direction: column;
-    border-radius: 10px;
-    padding: 5px 5px 5px 10px;
+    border-radius: 5px;
+    padding: 5px 5px 5px 15px;
     border: none;
-    width: 90%
+    width: 90vw
 }
 
 .designerInput {
-    /* margin-left: 20px;
-    margin-top: 15px; */
     align-content: space-around;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 5px;
     padding:5px 5px 5px 10px;
     border: none
 }
 
 .categoryDropDown {
-    /* margin-left: 20px;
-    margin-top: 15px; */
+    color: azure;
     align-content: space-around;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px 5px 5px 10px;
     border: none;
 }
 
+.cat {
+    padding: 5px;
+    border-radius: 5px;
+    color: rgb(130, 126, 126);
+}
+
 .submitButton {
-    /* margin-left: 20px;
-    margin-top: 15px; */
+    color: azure;
+    align-content: space-around;
+    flex-direction: column;
+    border-radius: 2px;
+    padding: 8px;
+    border: none;
+    background-color: #0aac02;
+}
+
+.sub {
     align-content: space-around;
     flex-direction: column;
     border-radius: 10px;
-    padding:5px 5px 5px 5px;
-    border: none
+    padding: 15px 5px 5px 15px;
+}
+
+.description {
+    color: azure;
+}
+
+.message {
+    color: rgb(230, 21, 21);
+    margin-top: 10px;
+}
+
+.thanks {
+    color: rgb(94, 193, 220);
+    margin-top: 10px;
 }

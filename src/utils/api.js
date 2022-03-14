@@ -73,7 +73,14 @@ export const patchVotes = (review_id) => {
 
 export const postReview = (body) => {
   return boardmastersApi.post(`/reviews`, body).then((res) => {
-    console.log(res)
     return res;
   });
 };
+
+export const deleteReview = (review_id) => {
+  console.log(review_id)
+  return boardmastersApi.delete(`/reviews/${review_id}`)
+    .then(({ data }) => {
+      return data
+    })
+}
