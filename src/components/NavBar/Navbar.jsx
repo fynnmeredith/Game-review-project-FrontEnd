@@ -1,7 +1,7 @@
 import "../NavBar/Navbar.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import HomeIcon from '@mui/icons-material/Home';
-import AddIcon from '@mui/icons-material/Add';
+import HomeIcon from "@mui/icons-material/Home";
+import AddIcon from "@mui/icons-material/Add";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../contexts/User";
 import { useContext } from "react";
@@ -53,10 +53,12 @@ const Navbar = () => {
               <option value="grumpy19">grumpy19</option>
             </select>
           </div>
-          <div className="navbarLink">
-            <Link to="/postReview">
-              <AddIcon />
-            </Link>
+          <div className="addReview">
+            <div className="addReviewLink">
+              <Link to="/postReview">
+                <AddIcon />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

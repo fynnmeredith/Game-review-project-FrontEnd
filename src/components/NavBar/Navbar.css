@@ -79,6 +79,15 @@
   position: relative;
 }
 
+.addReviewLink {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+  margin-top: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
 .navbarLinkHome {
   margin-right: 20px;
   cursor: pointer;

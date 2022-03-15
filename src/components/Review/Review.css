@@ -68,6 +68,16 @@ reviewHr {
   color: azure;
 }
 
+.deleteReview {
+  margin-left: 8px;
+  background-color: #f70404;
+  border: 1px;
+  padding: 3px 5px 2px 5px;
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 600px) {
   .reviewContainer {
     width: 600px;

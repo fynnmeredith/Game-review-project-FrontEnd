@@ -66,6 +66,10 @@
     background-color: #0aac02;
 }
 
+.submitButton:hover {
+    background-color: #538251;
+}
+
 .sub {
     align-content: space-around;
     flex-direction: column;
