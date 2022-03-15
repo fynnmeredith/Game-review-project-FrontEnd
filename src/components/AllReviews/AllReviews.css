@@ -63,7 +63,8 @@
 
   .date {
     flex: 1;
-    margin: 10px 0px 10px 10px
+    margin: 10px 0px 10px 10px;
+    align-self: center;
   }
 
   .reviewButton {
@@ -101,4 +102,8 @@
     color: azure;
     padding: 4px;
     border-radius: 2px;
+  }
+
+  .deleteReview:hover {
+    background-color: rgb(189, 55, 55);
   }

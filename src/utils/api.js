@@ -78,7 +78,6 @@ export const postReview = (body) => {
 };
 
 export const deleteReview = (review_id) => {
-  console.log(review_id)
   return boardmastersApi.delete(`/reviews/${review_id}`)
     .then(({ data }) => {
       return data

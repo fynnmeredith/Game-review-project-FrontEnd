@@ -3,14 +3,16 @@ import { postReview } from "../../utils/api";
 import { UserContext } from "../../contexts/User";
 import { useContext } from "react";
 import "../PostReview/PostReview.css";
-import { useParams } from "react-router-dom";
 
 const PostReview = () => {
   const { loggedInUser } = useContext(UserContext);
   const [review, setReview] = useState({
     owner: loggedInUser.username,
+    title: "",
+    designer: "",
+    category: "",
+    review_body: "",
   });
-  const [showMessage, setShowMessage] = useState(false);
 
   const handleChange = (event) => {
     const key = event.target.id;
@@ -18,7 +20,6 @@ const PostReview = () => {
     setReview((currValue) => {
       const newReview = { ...currValue };
       newReview[key] = value;
-      console.log(newReview);
       return newReview;
     });
   };
@@ -28,11 +29,14 @@ const PostReview = () => {
     if (!loggedInUser.username) {
       return;
     }
+    console.log(review);
     postReview(review).then((res) => {
-      setReview((currValue) => {
-        return {
-          username: loggedInUser.username,
-        };
+      setReview({
+        username: loggedInUser.username,
+        title: "",
+        designer: "",
+        category: "",
+        review_body: "",
       });
     });
   };
@@ -83,8 +87,8 @@ const PostReview = () => {
             onChange={(event) => handleChange(event)}
           >
             {" "}
-            <option disabled>pick a category:</option>
-            <option value="stategy">stategy</option>
+            <option disabled>Choose a category:</option>
+            <option value="strategy">strategy</option>
             <option value="hidden-roles">hidden-roles</option>
             <option value="dexterity">dexterity</option>
             <option value="push-your-luck">push-your-luck</option>
@@ -105,18 +109,7 @@ const PostReview = () => {
           ></textarea>
         </div>
         <div className="sub">
-          <button
-            className="submitButton"
-            onClick={() => setShowMessage((currVal) => !currVal)}
-          >
-            submit review
-          </button>
-          <div className="message">
-            {/* {Object.keys(review).length < 5 ? "Please fill out all review sections" : null} */}
-            <div className="thanks">
-              {showMessage ? "Thank you for submitting a review" : "Please fill out all review sections"}
-            </div>
-          </div>
+          <button className="submitButton">submit review</button>
         </div>
       </form>
     </div>

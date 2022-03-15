@@ -23,11 +23,11 @@
 }
 
 .delete {
-  color: azure;
-  background-color: rgb(252, 32, 32);
+  background-color: red;
   border: none;
+  color: azure;
+  padding: 4px;
   border-radius: 10px;
-  padding: 0px 5px 0px 5px;
 }
 
 .delete:hover {

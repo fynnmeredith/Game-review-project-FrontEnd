@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { deleteReview, getAllReviews } from "../../utils/api";
 import "../AllReviews/AllReviews.css";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import { UserContext } from "../../contexts/User";
@@ -11,7 +11,6 @@ const dayjs = require("dayjs");
 const AllReviews = () => {
   const { loggedInUser } = useContext(UserContext);
   const [reviews, setReviews] = useState([]);
-  const { review_id } = useParams();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -81,7 +80,6 @@ const AllReviews = () => {
                   </div>
                   <hr />
                   <div className="allFeedBottom">
-                    {/* <PatchVotes className="votes" review={review}/> */}
                     <button className="reviewButton">
                       <Link to={`/reviews/${review.review_id}`}>
                         Check out review
@@ -92,17 +90,17 @@ const AllReviews = () => {
                       {review.comment_count} comment(s)
                     </p>
                     <div className="delRev">
-                    {review.owner === loggedInUser.username ? (
-                  <button
-                    type="button"
-                    className="deleteReview"
-                    onClick={() => {
-                      handleDelete(review.review_id);
-                    }}
-                  >
-                    Delete review
-                  </button>
-                ) : null}
+                      {review.owner === loggedInUser.username ? (
+                        <button
+                          type="button"
+                          className="deleteReview"
+                          onClick={() => {
+                            handleDelete(review.review_id);
+                          }}
+                        >
+                          Delete your review
+                        </button>
+                      ) : null}
                     </div>
                     <p className="date">
                       {dayjs(review.created_at).format("H:mma MMMM D YYYY")}
