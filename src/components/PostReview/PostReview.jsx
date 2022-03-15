@@ -29,7 +29,6 @@ const PostReview = () => {
     if (!loggedInUser.username) {
       return;
     }
-    console.log(review);
     postReview(review).then((res) => {
       setReview({
         username: loggedInUser.username,
