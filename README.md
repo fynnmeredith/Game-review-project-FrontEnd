@@ -16,7 +16,7 @@ https://boardmasters.herokuapp.com/api
 
 ## Project summary
 
-This project was completed during my time on northcoders bootcamp, designed to showcase the front-end development skills that I had been learning in the previous week. The app joins with the back-end linked aboved and displays a board game review website with various user functionality. The app was built using React.js, HTML, and CSS.
+This project was completed during my time on northcoders bootcamp, designed to showcase the front-end development skills that I had been learning in the previous week. The app joins with the back-end linked aboved and displays a board game review website with various user functionality. The app was built using React.js, HTML, and vanilla CSS and javascript.
 
 ### Set-up
 
